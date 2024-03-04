@@ -66,7 +66,7 @@ def is_fused_attn_kernel_available(q_type, kv_type, qkv_layout, attn_bias_type, 
                            max_seqlen_q, max_seqlen_kv, head_dim).is_fused_attn_kernel_available()
 
 
-def self_fused_attn(qkv: jnp.ndarray, bias: jnp.ndarray, mask: jnp.ndarray, seed: jnp.ndarray,
+def self_fused_attn(qkv: jnp.ndarray, bias: jnp.ndarray , mask: jnp.ndarray, seed: jnp.ndarray,
                     attn_bias_type: AttnBiasType, attn_mask_type: AttnMaskType,
                     scaling_factor: float, dropout_probability: float, is_training: bool):
     """
